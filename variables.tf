@@ -3,7 +3,18 @@ variable "heroku_account_email" {
   type    = string
 }
 
-variable "heroku_api_key" {
+variable "heroku_account_email" {
+  default = ""
+  type    = string
+}
+
+variable "backstage_app_name" {
+  default   = ""
+  type      = string
+  sensitive = true
+}
+
+variable "backstage_region" {
   default   = ""
   type      = string
   sensitive = true

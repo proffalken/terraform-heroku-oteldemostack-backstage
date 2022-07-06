@@ -13,7 +13,7 @@ resource "heroku_build" "backstage" {
 
 resource "heroku_addon" "backstage_pgsql" {
   app_id = heroku_app.backstage.id
-  plan   = "heroku-postgresql:hobby-basic"
+  plan   = "heroku-postgresql:hobby-dev"
 }
 
 resource "heroku_config" "backstage_config" {

@@ -29,7 +29,6 @@ resource "heroku_config" "backstage_config" {
     GITHUB_TOKEN              = var.github_pat
     GRAFANA_PROMETHEUS_TOKEN  = var.prometheus_token
     GRAFANA_TOKEN             = var.grafana_token
-    DATABASE_URL              = heroku_addon.backstage_pgsql.config_var_values.uri
   }
 }
 

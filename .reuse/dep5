@@ -1,0 +1,14 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: oteldemostack-tf
+Upstream-Contact: Matthew Macdonald-Wallace <matt@doics.co>
+Source: https://github.com/proffalken/oteldemostack-tf
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
+
+Files: poetry.lock pyproject.yaml .github/* *.tf
+Copyright: 2022 Matthew Macdonald-Wallace <matt@doics.co>
+License: MIT-Modern-Variant

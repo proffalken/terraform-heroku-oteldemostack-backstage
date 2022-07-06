@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2022 Matthew Macdonald-Wallace <matt@doics.co>
+#
+# SPDX-License-Identifier: MIT-Modern-Variant
+
+[tool.poetry]
+name = "terraform-heroku-oteldemostack-backstage"
+version = "0.1.0"
+description = "The terraform module to launch Backstage.io"
+authors = ["Matthew Macdonald-Wallace <matt@doics.co>"]
+license = "MIT-Modern-Variant"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+reuse = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

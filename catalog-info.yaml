@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2022 Matthew Macdonald-Wallace <matt@doics.co>
+#
+# SPDX-License-Identifier: MIT-Modern-Variant
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: terraform-heroku-oteldemostack-backstage
+  description: |
+    Terraform code to launch [Backstage](https://backstage.io) on [Heroku](https://heroku.com)
+  annotations:
+    github.com/project-slug: proffalken/terraform-heroku-oteldemostack-backstage
+spec:
+  type: library
+  owner: Proffalken
+  lifecycle: development

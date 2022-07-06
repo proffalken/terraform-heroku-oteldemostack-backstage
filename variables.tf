@@ -3,7 +3,7 @@ variable "heroku_account_email" {
   type    = string
 }
 
-variable "heroku_account_email" {
+variable "heroku_api_key" {
   default = ""
   type    = string
 }

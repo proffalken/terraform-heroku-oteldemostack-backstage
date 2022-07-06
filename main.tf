@@ -1,6 +1,14 @@
 resource "heroku_app" "backstage" {
   name   = var.backstage_app_name
   region = var.backstage_region
+  stack  = "container"
+}
+
+resource "heroku_build" "backstage" {
+  app_id = heroku_app.backstage.id
+  source = {
+    url = "https://github.com/proffalken/generic-backstage/archive/refs/tags/v${var.backstage_version_number}.tar.gz"
+  }
 }
 
 resource "heroku_addon" "backstage_pgsql" {

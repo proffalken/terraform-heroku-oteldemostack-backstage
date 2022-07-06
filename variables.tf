@@ -8,6 +8,12 @@ variable "heroku_api_key" {
   type    = string
 }
 
+variable "backstage_version_number" {
+  default   = "1.0"
+  type      = string
+  sensitive = true
+}
+
 variable "backstage_app_name" {
   default   = ""
   type      = string

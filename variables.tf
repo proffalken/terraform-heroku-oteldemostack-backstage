@@ -1,8 +1,10 @@
 variable "heroku_account_email" {
-  type = string
+  default = ""
+  type    = string
 }
 
 variable "heroku_api_key" {
+  default   = ""
   type      = string
   sensitive = true
 }

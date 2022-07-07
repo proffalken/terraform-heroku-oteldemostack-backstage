@@ -4,11 +4,6 @@ terraform {
       source  = "heroku/heroku"
       version = "~> 5.0"
     }
-  }
-}
-
-terraform {
-  required_providers {
     herokux = {
       source  = "davidji99/herokux"
       version = "0.33.4"

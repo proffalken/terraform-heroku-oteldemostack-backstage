@@ -31,6 +31,11 @@ variable "github_client_id" {
   type    = string
 }
 
+variable "github_discovery_target" {
+  default = ""
+  type    = string
+}
+
 variable "prometheus_uri" {
   default = ""
   type    = string

@@ -25,6 +25,7 @@ resource "heroku_addon" "backstage_pgsql" {
 resource "heroku_config" "backstage_config" {
   vars = {
     GITHUB_AUTH_CLIENT_ID   = var.github_client_id
+    GITHUB_DISCOVERY_TARGET = var.github_discovery_target
     GRAFANA_PROMETHEUS_URI  = var.prometheus_uri
     GRAFANA_PROMETHEUS_USER = var.prometheus_user
     GRAFANA_URI             = var.grafana_uri

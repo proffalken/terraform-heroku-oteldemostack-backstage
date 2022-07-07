@@ -4,12 +4,18 @@ resource "heroku_app" "backstage" {
   stack  = "container"
 }
 
-resource "heroku_build" "backstage" {
-  app_id = heroku_app.backstage.id
-  source {
-    url = "https://github.com/proffalken/generic-backstage/archive/refs/tags/v${var.backstage_version_number}.tar.gz"
-  }
+data "herokux_registry_image" "backstage" {
+  app_id       = heroku_app.backstage.uuid
+  process_type = "web"
+  docker_tag   = "latest"
 }
+
+resource "herokux_app_container_release" "backstage" {
+  app_id       = heroku_app.backstage.uuid
+  image_id     = data.herokux_registry_image.backstage.digest
+  process_type = "web"
+}
+
 
 resource "heroku_addon" "backstage_pgsql" {
   app_id = heroku_app.backstage.id

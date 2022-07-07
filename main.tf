@@ -22,6 +22,7 @@ resource "heroku_config" "backstage_config" {
     GRAFANA_PROMETHEUS_URI  = var.prometheus_uri
     GRAFANA_PROMETHEUS_USER = var.prometheus_user
     GRAFANA_URI             = var.grafana_uri
+    PGSSLMODE               = "no-verify"
   }
 
   sensitive_vars = {

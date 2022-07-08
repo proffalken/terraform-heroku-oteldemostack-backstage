@@ -30,6 +30,7 @@ resource "heroku_config" "backstage_config" {
     GRAFANA_PROMETHEUS_USER = var.prometheus_user
     GRAFANA_URI             = var.grafana_uri
     PGSSLMODE               = "no-verify"
+    HEROKU_PROJECT_NAME     = var.backstage_app_name
   }
 
   sensitive_vars = {

@@ -14,3 +14,26 @@ spec:
   type: library
   owner: Proffalken
   lifecycle: development
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: terraform-heroku-oteldemostack-backstage
+  description: Terraform code to launch backstage into Heroku
+spec:
+  type: public
+  lifecycle: production
+  owner: matt@doics.co
+  definition: |
+    type: Terraform
+    inputs:
+      heroku_account_email:
+        description: The email address you use to log in to your Heroku account
+        type: string
+      heroku_api_key:
+        description: The API Key to authenticate to Heroku and manage your apps
+        type: string
+        sensitive: true
+      backstage_app_name: 
+        description: The name of the application in Heroku (alphanumeric, no whitespace)
+        type: string 

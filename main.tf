@@ -34,10 +34,11 @@ resource "heroku_config" "backstage_config" {
   }
 
   sensitive_vars = {
-    GITHUB_AUTH_CLIENT_SECRET = var.github_client_secret
-    GITHUB_TOKEN              = var.github_pat
-    GRAFANA_PROMETHEUS_TOKEN  = var.prometheus_token
-    GRAFANA_TOKEN             = var.grafana_token
+    GITHUB_AUTH_CLIENT_SECRET       = var.github_client_secret
+    GITHUB_TOKEN                    = var.github_pat
+    GRAFANA_PROMETHEUS_TOKEN        = var.prometheus_token
+    GRAFANA_PROMETHEUS_VIEWER_TOKEN = var.prometheus_viewer_token
+    GRAFANA_TOKEN                   = var.grafana_token
   }
 }
 

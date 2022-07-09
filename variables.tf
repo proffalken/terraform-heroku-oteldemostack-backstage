@@ -46,6 +46,12 @@ variable "prometheus_user" {
   type    = string
 }
 
+variable "prometheus_viewer_token" {
+  sensitive = true
+  default   = ""
+  type      = string
+}
+
 variable "grafana_uri" {
   default = ""
   type    = string

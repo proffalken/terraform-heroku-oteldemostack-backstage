@@ -9,7 +9,7 @@ metadata:
   description: |
     Terraform code to launch [Backstage](https://backstage.io) on [Heroku](https://heroku.com)
   annotations:
-    github.com/project-slug: proffalken/terraform-heroku-oteldemostack-backstage
+    github.com/project-slug: proffalkens-demo-stack/terraform-heroku-oteldemostack-backstage
 spec:
   type: library
   owner: Proffalken

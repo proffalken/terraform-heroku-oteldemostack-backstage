@@ -27,7 +27,6 @@ resource "heroku_config" "backstage_config" {
     GITHUB_AUTH_CLIENT_ID   = var.github_client_id
     GITHUB_DISCOVERY_TARGET = var.github_discovery_target
     GRAFANA_PROMETHEUS_URI  = var.prometheus_uri
-    GRAFANA_PROMETHEUS_USER = var.prometheus_user
     GRAFANA_URI             = var.grafana_uri
     PGSSLMODE               = "no-verify"
     HEROKU_PROJECT_NAME     = var.backstage_app_name
@@ -36,8 +35,9 @@ resource "heroku_config" "backstage_config" {
   sensitive_vars = {
     GITHUB_AUTH_CLIENT_SECRET       = var.github_client_secret
     GITHUB_TOKEN                    = var.github_pat
+    GRAFANA_PROMETHEUS_USER         = var.prometheus_user
     GRAFANA_PROMETHEUS_TOKEN        = var.prometheus_token
-    GRAFANA_PROMETHEUS_VIEWER_TOKEN = var.prometheus_viewer_token
+    GRAFANA_PROMETHEUS_VIEWER_TOKEN = base64encode("${var.prometheus_user}:${var.prometheus_viewer_token}")
     GRAFANA_TOKEN                   = var.grafana_token
   }
 }
